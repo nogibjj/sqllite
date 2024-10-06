@@ -1,6 +1,7 @@
-[![Python 3.11.9](https://github.com/syedhumarahim/scaffold/actions/workflows/main.yml/badge.svg)](https://github.com/syedhumarahim/scaffold/actions/workflows/main.yml)
+[![Python 3.11](https://github.com/nogibjj/sqllite/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/sqllite/actions/workflows/main.yml)
 
-# Scaffold
+# Interacting with SQL Database using Python Script
+
 This is the sixth Assignment for Data Engineering on Interacting with SQL Database.
 
 # Medical Records CRUD Operations with SQLite
@@ -9,7 +10,21 @@ This project demonstrates how to perform basic CRUD (Create, Read, Update, Delet
 
 ## Project Structure
 
-. ├── .devcontainer/ # DevContainer setup files ├── .github/ # GitHub Actions CI/CD workflows ├── Scripts/ # Contains any additional scripts for automation ├── data/ # Contains the CSV data files used to load into the SQLite database │ └── medical_records.csv # Medical records CSV file ├── helper/ # Helper scripts (like utility functions) ├── CRUD_functions.py # CRUD operations for database ├── .gitignore # Git ignore file ├── Dockerfile # Docker setup file for the project ├── Makefile # Makefile to automate setup, linting, formatting, and testing ├── README.md # Project documentation ├── main.py # Main Python file that contains the CRUD operations ├── medical_records_DB.db # The SQLite database file ├── mklink # Placeholder for linked files/folders ├── pyvenv.cfg # Python virtual environment configuration file ├── requirements.txt # Python package dependencies ├── test_main.py # Unit tests for the CRUD operations
+```
+├── .devcontainer/            # DevContainer setup files
+├── .github/                  # GitHub Actions CI/CD workflows
+├── data/                     # Contains the CSV data files used to load into the SQLite database
+│   └── medical_records.csv    # Medical records CSV file
+├── helper/                   # Helper scripts (like utility functions to perform SQL operations)
+├── CRUD_functions.py          # CRUD operations for database
+├── .gitignore                # Git ignore file
+├── Makefile                  # Makefile to automate setup, linting, formatting, and testing
+├── README.md                 # Project documentation
+├── main.py                   # Main Python file that contains the CRUD operations
+├── medical_records_DB.db      # The SQLite database file
+├── requirements.txt          # Python package dependencies
+├── test_main.py              # Unit tests for the CRUD operations
+```
 
 
 ## Features
@@ -24,7 +39,7 @@ This project demonstrates how to perform basic CRUD (Create, Read, Update, Delet
 
 ### 1. Clone the Repository
 
-```bash
+```
 git clone https://github.com/your-username/medical-records-crud.git
 cd medical-records-crud```
 
@@ -39,8 +54,7 @@ Upgrade pip and install all dependencies listed in requirements.txt.
 ### 3. Load the SQLite Database
 
 To load the medical records from the data/medical_records.csv into the SQLite database, run:
-```
-make load_db```
+```make load_db```
 
 This will create and populate the medical_records_DB.db file.
 
@@ -88,10 +102,9 @@ The SQLite database contains a single table called `medical_records`, which stor
 ### Example Queries:
 You can run the following SQL queries to interact with the `medical_records` table:
 
-- **Read All Records**:
+- **fetching patients with asthma**:
 
-  ```sql
-  SELECT * FROM medical_records;```
+  ```SELECT * FROM medical_records WHERE medical_conditions LIKE '%asthma%';```
 
 
 # CI/CD Pipeline with GitHub Actions
