@@ -1,16 +1,18 @@
 install:
 	pip install --upgrade pip && pip install -r requirements.txt
 
-run:
-	python3 main.py
+format:	
+	black *.py 
 
 lint:
-	pylint --disable=R,C main.py
+	ruff check *.py helper/*.py 
+
+load_db:
+	python -c "from helper.CRUD_functions import load_medical_database; load_medical_database()"
 
 test:
-	python3 test_main.py 
+	python -m pytest -vv --cov=. test_main.py --disable-warnings
 
-cp C:/Users/ss1516/Downloads/Bob_PythonTemplate1-main/Bob_PythonTemplate1-main/.devcontainer .
 
-all: install run test lint
+all: install lint format load_db test
 
