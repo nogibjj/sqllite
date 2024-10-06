@@ -41,12 +41,14 @@ This project demonstrates how to perform basic CRUD (Create, Read, Update, Delet
 
 ```
 git clone https://github.com/your-username/medical-records-crud.git
-cd medical-records-crud```
+cd medical-records-crud
+```
 
 ### 2. Install Dependencies
 Install the required Python packages using pip:
 
-```make install```
+```make install
+```
 
 This will:
 Upgrade pip and install all dependencies listed in requirements.txt.
@@ -54,7 +56,8 @@ Upgrade pip and install all dependencies listed in requirements.txt.
 ### 3. Load the SQLite Database
 
 To load the medical records from the data/medical_records.csv into the SQLite database, run:
-```make load_db```
+```make load_db
+```
 
 This will create and populate the medical_records_DB.db file.
 
@@ -111,7 +114,7 @@ You can run the following SQL queries to interact with the `medical_records` tab
 
 ![CI-CD Pipeline](gif_sql.gif)
 
-To maintain code quality and streamline development, I set up a CI/CD pipeline using GitHub Actions. Here's how it enhances the project:
+To maintain code quality and streamline development, I have set up a CI/CD pipeline using GitHub Actions. Here's how it enhances the project:
 
 - **Automated Testing**:
   - Every push triggers tests using **pytest**, ensuring new changes don't break existing functionality.
