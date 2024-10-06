@@ -47,7 +47,8 @@ cd medical-records-crud
 ### 2. Install Dependencies
 Install the required Python packages using pip:
 
-```make install
+```
+make install
 ```
 
 This will:
@@ -56,7 +57,8 @@ Upgrade pip and install all dependencies listed in requirements.txt.
 ### 3. Load the SQLite Database
 
 To load the medical records from the data/medical_records.csv into the SQLite database, run:
-```make load_db
+```
+make load_db
 ```
 
 This will create and populate the medical_records_DB.db file.
